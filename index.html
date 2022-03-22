@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <meta charset = "UTF-8">
+  <link rel = "stylesheet" href="./public/style.css">
+  <title> Company Encyclopedia </title>
+</head>
+<body>
+    <header>
+      <h1 id="heading">Company List Database</h1>
+    </header>
+    <form action="/add" method="POST">
+      <fieldset>
+        <h3>Add new Company</h3>
+        <label>Comp_ID</label>
+        <input type ="text" id = 'empID' name="id" placeholder="1" required>
+        <br><br>
+        <label>Comp_Na</label>
+        <input type="text" id = "name" name="name" placeholder="wallmart" required>
+        <br><br>
+        <label>Comp_Ad</label>
+        <input type="text" id = "address" name="address" placeholder="street 1, wallstreet, USA" required>
+        <br><br>
+        <button type ="reset">Reset</button>
+        <button type ="submit">Submit</button>
+      </fieldset>
+    </form>
+
+    <form action="/view" method="POST">
+        <fieldset>
+          <h3>View a company (Enter Id 0 to see all the entry)</h3>
+          <label>Comp_ID</label>
+          <input type="text" id="empID" name="id" placeholder="1" required>
+          <br><br>
+          <button type ="reset">Reset</button>
+          <button type ="submit">Submit</button>
+          <br><br><br>
+        </fieldset>
+       </form>
+
+
+       <form action="/update" method="POST">
+        <fieldset>
+          <h3>Update a company_detail</h3>
+          <label>Comp_ID</label>
+          <input type ="text" id = 'empID' name="id" placeholder="1" required>
+          <br><br>
+          <label>Comp_Na </label>
+          <input type="text" id = "name" name="name" placeholder="New Name" >
+          <br><br>
+          <label>Comp_Ad </label>
+          <input type="text" id = "name" name="address" placeholder="New Address" >
+          <br><br>
+          <button type ="reset">Reset</button>
+          <button type ="submit">Submit</button>
+        </fieldset>
+        <table id="my_table">
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Address</th>
+          </tr>
+        </table>
+        
+       </form>
+       
+       <form action="/delete" method="POST">
+        <fieldset>
+          <h3>Delete a company</h3>
+          <label>Comp_ID</label>
+          <input type ="text" id = 'empID' name="id" placeholder="1" required>
+          <br><br>
+          <button type ="reset">Reset</button>
+          <button type ="submit" id="view_submit">Submit</button>
+          <br><br><br>
+        </fieldset>
+       </form>
+
+       <footer>
+        <hr>
+      </footer>
+
+    </body>
+  </html>
+  
+  
